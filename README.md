@@ -23,6 +23,14 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 
 ---
 
+## 🔗 Live Demos
+
+You can try the deployed AlexNet model here:
+
+- 🌐 **Streamlit App:** [https://cnn-models.streamlit.app](https://cnn-models.streamlit.app)
+
+--- 
+
 ## 📦 Installation
 
 1. Clone the repo:
