@@ -1,6 +1,7 @@
 # CNN Models
 
 Welcome to the **CNN Models** repository! This repo contains implementations of popular Convolutional Neural Network (CNN) architectures, designed for learning and experimentation purposes.
+All models will be deployed on Hugging Face for easy access and use. You can check out the first model, AlexNet, here: TanishRajput/Alexnet. More model links will be added soon!
 
 ---
 
