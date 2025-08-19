@@ -2,15 +2,20 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+from huggingface_hub import hf_hub_download
 
 # CIFAR-10 class names
 class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
                'dog', 'frog', 'horse', 'ship', 'truck']
 
-# Load the trained model
+# Load the trained model from Hugging Face
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("model/alexnet.keras")
+    # Download the model file from Hugging Face
+    model_path = hf_hub_download(repo_id="Tanishrajput/AlexNet", filename="alexnet.keras")
+    
+    # Load the model
+    model = tf.keras.models.load_model(model_path)
     return model
 
 model = load_model()
