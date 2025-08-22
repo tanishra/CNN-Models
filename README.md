@@ -36,7 +36,7 @@ You can try the deployed AlexNet model here:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/CNN-Models.git
+   git clone https://github.com/tanishra/CNN-Models.git
    cd CNN-Models
    `````
 2. (Optional) Create and activate a virtual environment:
