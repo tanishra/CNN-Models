@@ -1,7 +1,7 @@
 # CNN Models
 
 Welcome to the **CNN Models** repository! This repo contains implementations of popular Convolutional Neural Network (CNN) architectures, designed for learning and experimentation purposes.
-All models will be deployed on Hugging Face for easy access and use. You can check out the first model, **AlexNet**, here: [TanishRajput/Alexnet](https://huggingface.co/TanishRajput/Alexnet).  More model links will be added soon!
+All models will be deployed on Hugging Face for easy access and use. You can check out the first model, **AlexNet**, here: [TanishRajput/Alexnet](https://huggingface.co/TanishRajput/Alexnet), **VGG-16**, here: [Tanishrajput/VGG-16](https://huggingface.co/Tanishrajput/VGG-16). More model links will be added soon!
 
 ---
 
@@ -14,9 +14,9 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 ## 📚 Included Models
 
 | Model Name  | Description                                         | Dataset(s) Used        | Notes                                   |
-|-------------|-----------------------------------------------------|-----------------------|-----------------------------------------|
+|-------------|-----------------------------------------------------|-------------------------|-----------------------------------------|
 | AlexNet     | One of the first deep CNNs, popularized deep learning for images. | CIFAR-10, ImageNet    | Adapted for CIFAR-10 with smaller FC layers. |
-<!-- | VGG16       | Deep CNN with very small (3x3) convolution filters. | CIFAR-10, ImageNet    | Standard architecture for many tasks.  | -->
+| VGG16       | Deep CNN with very small (3x3) convolution filters. | CIFAR-10, ImageNet    | Achieved **94.2% accuracy** on CIFAR-10 with custom training. |
 <!-- | ResNet50    | Introduced residual connections to combat vanishing gradients. | CIFAR-10, ImageNet    | Powerful architecture for deep networks. | -->
 <!-- | MobileNetV2 | Efficient and lightweight CNN architecture for mobile and embedded devices. | CIFAR-10, ImageNet    | Great for resource-constrained environments. | -->
 
@@ -29,6 +29,10 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 You can try the deployed AlexNet model here:
 
 - 🌐 **Streamlit App:** [Link](https://cnn-models-dhuwwjq428nsujvkbmrvd3.streamlit.app)
+
+You can try the deployed VGG-16 model here:
+
+- 🌐 **Streamlit App:** [Link](https://cnn-models-7jb2etgepabdragvfhtdpr.streamlit.app)
 
 --- 
 
