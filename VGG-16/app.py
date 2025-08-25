@@ -3,16 +3,17 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from PIL import Image
+from huggingface_hub import hf_hub_download
 
 # CIFAR-10 classes
 CLASSES = ['airplane', 'automobile', 'bird', 'cat', 'deer',
            'dog', 'frog', 'horse', 'ship', 'truck']
 
-# VGG config
+# VGG-16 configuration
 cfg_vgg16 = [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M',
              512, 512, 512, 'M', 512, 512, 512, 'M']
 
-# Create VGG architecture with BatchNorm
+# VGG-16 Model Definition
 class VGG(nn.Module):
     def __init__(self, features, num_classes=10):
         super(VGG, self).__init__()
@@ -53,20 +54,23 @@ def make_layers(cfg_list, batch_norm=True):
 def vgg16_bn(num_classes=10):
     return VGG(make_layers(cfg_vgg16, batch_norm=True), num_classes=num_classes)
 
-# Load trained model
+# Loade model from Hugging Face 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = vgg16_bn(num_classes=10)
-model.load_state_dict(torch.load("VGG_model.pth", map_location=device))
+
+model_file_path = hf_hub_download(repo_id="Tanishrajput/VGG-16", filename="VGG_model.pth")
+model.load_state_dict(torch.load(model_file_path, map_location=device))
 model.to(device)
 model.eval()
 
-# Streamlit UI
+
+# Streamlit App
 st.title("CIFAR-10 Image Classifier (VGG16)")
 st.write("Upload an image to classify it into one of the 10 CIFAR-10 classes.")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
-# Preprocessing (same as training)
+
 transform = transforms.Compose([
     transforms.Resize((32, 32)),
     transforms.ToTensor(),
@@ -88,7 +92,6 @@ if uploaded_file is not None:
     st.subheader(f"Predicted Class: **{CLASSES[predicted.item()]}**")
     st.write(f"Confidence: **{confidence.item()*100:.2f}%**")
 
-    # Show top 5 predictions
     st.subheader("Top 5 Predictions:")
     top5_prob, top5_classes = torch.topk(probs, 5)
     for i in range(5):
