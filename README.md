@@ -47,10 +47,22 @@ You can try the deployed VGG-16 model here:
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
-    `````
-3. Install dependencies:
+    ````
+3. Install dependencies for a specific model:
+    ### AlexNet
     ```bash
+    cd alexnet
     pip install -r requirements.txt
+    ```
+
+    ### VGG-16
+    ```bash
+    cd vgg-16
+    pip install -r requirements.txt
+    `````
+4. Run the model scripts or Streamlit apps according to the folder you choose.
+    ```bash
+    streamlit run app.py
     `````
 
 ---
