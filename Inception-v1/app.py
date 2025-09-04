@@ -4,10 +4,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision.transforms as transforms
 from PIL import Image
-import pickle
-import io
+from huggingface_hub import hf_hub_download
 
-# InceptionBlock
+# ------------------- MODEL COMPONENTS -------------------
 class InceptionBlock(nn.Module):
     def __init__(self, in_channels, ch1x1, ch3x3reduce, ch3x3, ch5x5reduce, ch5x5, pool_proj):
         super(InceptionBlock, self).__init__()
@@ -42,7 +41,7 @@ class InceptionBlock(nn.Module):
     def forward(self, x):
         return torch.cat([self.branch1(x), self.branch2(x), self.branch3(x), self.branch4(x)], 1)
 
-# Auxiliary Classifier
+
 class AuxiliaryClassifier(nn.Module):
     def __init__(self, in_channels, num_classes):
         super(AuxiliaryClassifier, self).__init__()
@@ -60,7 +59,6 @@ class AuxiliaryClassifier(nn.Module):
         return x
 
 
-# GoogLeNetCIFAR
 class GoogLeNetCIFAR(nn.Module):
     def __init__(self, num_classes=10):
         super(GoogLeNetCIFAR, self).__init__()
@@ -87,7 +85,6 @@ class GoogLeNetCIFAR(nn.Module):
         self.dropout = nn.Dropout(0.4)
         self.fc = nn.Linear(1024, num_classes)
 
-        # Aux classifiers
         self.aux1 = AuxiliaryClassifier(512, num_classes)
         self.aux2 = AuxiliaryClassifier(528, num_classes)
 
@@ -118,25 +115,29 @@ class GoogLeNetCIFAR(nn.Module):
 
         return x, aux1, aux2
 
-# Streamlit UI
+# ------------------- STREAMLIT APP -------------------
 st.title("CIFAR-10 Image Classification using GoogLeNet (Inception v1)")
 
-# Load model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# Download model from Hugging Face Hub
+model_path = hf_hub_download(repo_id="TanishRajput/Inception-v1", filename="Inception-v1.pth")
+
+# Load model
 model = GoogLeNetCIFAR()
-model.load_state_dict(torch.load("Inception-v1.pth", map_location=device))
+model.load_state_dict(torch.load(model_path, map_location=device))
 model.to(device)
 model.eval()
 
-# CIFAR-10 classes
+# CIFAR-10 Classes
 classes = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
-# Upload image
-uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
+# File Upload
+uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Uploaded Image")
+    st.image(image, caption="Uploaded Image", width=300)
 
     transform = transforms.Compose([
         transforms.Resize((32, 32)),
@@ -153,6 +154,6 @@ if uploaded_file:
 
     predicted_label = classes[predicted_class.item()]
     confidence_score = confidence.item() * 100
-    st.write(f"Predicted Class: **{predicted_label}**")
-    st.write(f"Confidence: **{confidence_score:.2f}%**")
-
+    st.write(f"**Predicted Class:** {predicted_label}")
+    st.write(f"**Confidence Score:** {confidence_score:.2f}%")
+   
