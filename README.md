@@ -43,7 +43,7 @@ You can try the deployed models here:
 - 🌐 **Streamlit App:** [Link](https://cnn-models-7jb2etgepabdragvfhtdpr.streamlit.app)
 
 - **Inception-v1 (GoogLeNet)**:  
-  🌐 **Streamlit App:** [Link](https://cnn-models-inceptionv1.streamlit.app) *(Add your actual Streamlit app link here once deployed)*
+  🌐 **Streamlit App:** [Link](https://cnn-models-phf53k6qqgkw4blwzql85r.streamlit.app)
 
 --- 
 
