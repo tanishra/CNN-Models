@@ -20,11 +20,11 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 
 ## 📚 Included Models
 
-| Model Name  | Description                                         | Dataset(s) Used        | Notes                                   |
-|-------------|-----------------------------------------------------|-------------------------|-----------------------------------------|
-| AlexNet     | One of the first deep CNNs, popularized deep learning for images. | CIFAR-10, ImageNet    | Adapted for CIFAR-10 with smaller FC layers. |
-| VGG16       | Deep CNN with very small (3x3) convolution filters. | CIFAR-10, ImageNet    | Achieved **94.2% accuracy** on CIFAR-10 with custom training. |
-| Inception-v1  | Introduced Inception modules for multi-scale feature extraction. | CIFAR-10             | Custom implementation for CIFAR-10 dataset.      |
+| Model            | Key Idea                                           | Dataset        | Performance                                  |
+|------------------|---------------------------------------------------|---------------|---------------------------------------------|
+| **AlexNet**      | A pioneering CNN that popularized deep learning. | CIFAR-10      | Optimized for small image sizes.           |
+| **VGG-16**       | Deep network with uniform 3×3 convolution layers.| CIFAR-10      | Reached **94.2% accuracy** with tuning.    |
+| **Inception-v1** | Multi-scale feature extraction using Inception modules. | CIFAR-10 | Achieved **91.21% test accuracy** with custom training. |
 <!-- | ResNet50    | Introduced residual connections to combat vanishing gradients. | CIFAR-10, ImageNet    | Powerful architecture for deep networks. | -->
 <!-- | MobileNetV2 | Efficient and lightweight CNN architecture for mobile and embedded devices. | CIFAR-10, ImageNet    | Great for resource-constrained environments. | -->
 
