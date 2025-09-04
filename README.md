@@ -1,7 +1,14 @@
 # CNN Models
 
 Welcome to the **CNN Models** repository! This repo contains implementations of popular Convolutional Neural Network (CNN) architectures, designed for learning and experimentation purposes.
-All models will be deployed on Hugging Face for easy access and use. You can check out the first model, **AlexNet**, here: [TanishRajput/Alexnet](https://huggingface.co/TanishRajput/Alexnet), **VGG-16**, here: [Tanishrajput/VGG-16](https://huggingface.co/Tanishrajput/VGG-16). More model links will be added soon!
+All models will be deployed on Hugging Face for easy access and use. 
+
+You can check out the models here:  
+- **AlexNet**: [TanishRajput/Alexnet](https://huggingface.co/TanishRajput/Alexnet)  
+- **VGG-16**: [TanishRajput/VGG-16](https://huggingface.co/TanishRajput/VGG-16)  
+- **Inception-v1 (GoogLeNet)**: [TanishRajput/Inception-v1](https://huggingface.co/TanishRajput/Inception-v1) 
+
+ More model links will be added soon!
 
 ---
 
@@ -17,6 +24,7 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 |-------------|-----------------------------------------------------|-------------------------|-----------------------------------------|
 | AlexNet     | One of the first deep CNNs, popularized deep learning for images. | CIFAR-10, ImageNet    | Adapted for CIFAR-10 with smaller FC layers. |
 | VGG16       | Deep CNN with very small (3x3) convolution filters. | CIFAR-10, ImageNet    | Achieved **94.2% accuracy** on CIFAR-10 with custom training. |
+| Inception-v1  | Introduced Inception modules for multi-scale feature extraction. | CIFAR-10             | Custom implementation for CIFAR-10 dataset.      |
 <!-- | ResNet50    | Introduced residual connections to combat vanishing gradients. | CIFAR-10, ImageNet    | Powerful architecture for deep networks. | -->
 <!-- | MobileNetV2 | Efficient and lightweight CNN architecture for mobile and embedded devices. | CIFAR-10, ImageNet    | Great for resource-constrained environments. | -->
 
@@ -26,13 +34,16 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 
 ## 🔗 Live Demos
 
-You can try the deployed AlexNet model here:
+You can try the deployed models here:
 
+- **AlexNet**:  
 - 🌐 **Streamlit App:** [Link](https://cnn-models-dhuwwjq428nsujvkbmrvd3.streamlit.app)
 
-You can try the deployed VGG-16 model here:
-
+- **VGG-16**:  
 - 🌐 **Streamlit App:** [Link](https://cnn-models-7jb2etgepabdragvfhtdpr.streamlit.app)
+
+- **Inception-v1 (GoogLeNet)**:  
+  🌐 **Streamlit App:** [Link](https://cnn-models-inceptionv1.streamlit.app) *(Add your actual Streamlit app link here once deployed)*
 
 --- 
 
@@ -59,7 +70,14 @@ You can try the deployed VGG-16 model here:
     ```bash
     cd vgg-16
     pip install -r requirements.txt
-    `````
+    ```
+
+    ### Inception-v1
+    ```bash
+    cd Inception-v1
+    pip install -r requirements.txt
+    ````
+
 4. Run the model scripts or Streamlit apps according to the folder you choose.
     ```bash
     streamlit run app.py
