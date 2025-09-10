@@ -38,13 +38,13 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 You can try the deployed models here:
 
 - **AlexNet**:  
-- 🌐 **Streamlit App:** [Link](https://cnn-models-dhuwwjq428nsujvkbmrvd3.streamlit.app)
+- 🌐 **Streamlit App:** [Link](https://tanishrajputalexnet.streamlit.app)
 
 - **VGG-16**:  
-- 🌐 **Streamlit App:** [Link](https://cnn-models-7jb2etgepabdragvfhtdpr.streamlit.app)
+- 🌐 **Streamlit App:** [Link](https://tanishrajputvgg-16.streamlit.app)
 
 - **Inception-v1 (GoogLeNet)**:  
-  🌐 **Streamlit App:** [Link](https://cnn-models-phf53k6qqgkw4blwzql85r.streamlit.app)
+  🌐 **Streamlit App:** [Link](https://tanishrajputinception-v1.streamlit.app)
 
 - **ResNet-50**:  
   🌐 **Streamlit App:** [Link](https://tanishrajputresnet-50.streamlit.app)
