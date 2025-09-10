@@ -46,8 +46,8 @@ You can try the deployed models here:
 - **Inception-v1 (GoogLeNet)**:  
   🌐 **Streamlit App:** [Link](https://cnn-models-phf53k6qqgkw4blwzql85r.streamlit.app)
 
-- **ResNet-50**:
-  🌐 **Streamlit App:** [Link](https://tanishrajputresnet-50.streamlit.app) 
+- **ResNet-50**:  
+  🌐 **Streamlit App:** [Link](https://tanishrajputresnet-50.streamlit.app)
 
 --- 
 
