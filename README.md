@@ -7,6 +7,7 @@ You can check out the models here:
 - **AlexNet**: [TanishRajput/Alexnet](https://huggingface.co/TanishRajput/Alexnet)  
 - **VGG-16**: [TanishRajput/VGG-16](https://huggingface.co/TanishRajput/VGG-16)  
 - **Inception-v1 (GoogLeNet)**: [TanishRajput/Inception-v1](https://huggingface.co/TanishRajput/Inception-v1) 
+- **ResNet-50**: [TanishRajput/ResNet-50](https://huggingface.co/TanishRajput/ResNet-50)  
 
  More model links will be added soon!
 
@@ -25,7 +26,7 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 | **AlexNet**      | A pioneering CNN that popularized deep learning. | CIFAR-10      | Optimized for small image sizes.           |
 | **VGG-16**       | Deep network with uniform 3×3 convolution layers.| CIFAR-10      | Reached **94.2% accuracy** with tuning.    |
 | **Inception-v1** | Multi-scale feature extraction using Inception modules. | CIFAR-10 | Achieved **91.21% test accuracy** with custom training. |
-<!-- | ResNet50    | Introduced residual connections to combat vanishing gradients. | CIFAR-10, ImageNet    | Powerful architecture for deep networks. | -->
+| **ResNet-50**    | Introduced residual connections to combat vanishing gradients. | CIFAR-100 | Achieved **87.16% test accuracy** with transfer learning + data augmentation. |
 <!-- | MobileNetV2 | Efficient and lightweight CNN architecture for mobile and embedded devices. | CIFAR-10, ImageNet    | Great for resource-constrained environments. | -->
 
 *(More models coming soon!)*
@@ -44,6 +45,9 @@ You can try the deployed models here:
 
 - **Inception-v1 (GoogLeNet)**:  
   🌐 **Streamlit App:** [Link](https://cnn-models-phf53k6qqgkw4blwzql85r.streamlit.app)
+
+- **ResNet-50**:
+  🌐 **Streamlit App:** [Link](https://tanishrajputresnet-50.streamlit.app) 
 
 --- 
 
@@ -75,6 +79,11 @@ You can try the deployed models here:
     ### Inception-v1
     ```bash
     cd Inception-v1
+    pip install -r requirements.txt
+    ```
+    ### ResNet-50
+    ```bash
+    cd ResNet-50
     pip install -r requirements.txt
     ````
 
