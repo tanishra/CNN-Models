@@ -7,7 +7,8 @@ You can check out the models here:
 - **AlexNet**: [TanishRajput/Alexnet](https://huggingface.co/TanishRajput/Alexnet)  
 - **VGG-16**: [TanishRajput/VGG-16](https://huggingface.co/TanishRajput/VGG-16)  
 - **Inception-v1 (GoogLeNet)**: [TanishRajput/Inception-v1](https://huggingface.co/TanishRajput/Inception-v1) 
-- **ResNet-50**: [TanishRajput/ResNet-50](https://huggingface.co/TanishRajput/ResNet-50)  
+- **ResNet-50**: [TanishRajput/ResNet-50](https://huggingface.co/TanishRajput/ResNet-50) 
+- **Inception-v3**: [TanishRajput/Inception-v3](https://huggingface.co/TanishRajput/Inception-v3) 
 
  More model links will be added soon!
 
@@ -27,6 +28,7 @@ Convolutional Neural Networks (CNNs) are a class of deep learning models particu
 | **VGG-16**       | Deep network with uniform 3×3 convolution layers.| CIFAR-10      | Reached **94.2% accuracy** with tuning.    |
 | **Inception-v1** | Multi-scale feature extraction using Inception modules. | CIFAR-10 | Achieved **91.21% test accuracy** with custom training. |
 | **ResNet-50**    | Introduced residual connections to combat vanishing gradients. | CIFAR-100 | Achieved **87.16% test accuracy** with transfer learning + data augmentation. |
+| **Inception-v3** | Enhanced Inception modules with factorized convolutions and auxiliary classifiers. | CIFAR-100 | Achieved **83.53% test accuracy** with transfer learning. |
 <!-- | MobileNetV2 | Efficient and lightweight CNN architecture for mobile and embedded devices. | CIFAR-10, ImageNet    | Great for resource-constrained environments. | -->
 
 *(More models coming soon!)*
@@ -48,6 +50,9 @@ You can try the deployed models here:
 
 - **ResNet-50**:  
   🌐 **Streamlit App:** [Link](https://tanishrajputresnet-50.streamlit.app)
+
+- **Inception-v3**:
+  🌐 **Streamlit App:** [Link](https://tanishrajputinception-v3.streamlit.app)
 
 --- 
 
@@ -85,6 +90,11 @@ You can try the deployed models here:
     ```bash
     cd ResNet-50
     pip install -r requirements.txt
+    ```
+    ### Inception-v3
+    ```bash
+    cd Inception-v3
+    pip install -r requirements.txt
     ````
 
 4. Run the model scripts or Streamlit apps according to the folder you choose.
@@ -97,7 +107,7 @@ You can try the deployed models here:
 ## 🛠 Usage
 - Each model folder contains:
 - Model code: Implementation of the CNN architecture.
-- Training script: Code to train the model on datasets like CIFAR-10.
+- Training script: Code to train the model on datasets like CIFAR-10, CIFAR-100, etc.
 - Evaluation script: Test the trained model on validation or test sets.
 
 ---
