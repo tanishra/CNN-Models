@@ -51,7 +51,7 @@ You can try the deployed models here:
 - **ResNet-50**:  
   🌐 **Streamlit App:** [Link](https://tanishrajputresnet-50.streamlit.app)
 
-- **Inception-v3**:
+- **Inception-v3**:  
   🌐 **Streamlit App:** [Link](https://tanishrajputinception-v3.streamlit.app)
 
 --- 
